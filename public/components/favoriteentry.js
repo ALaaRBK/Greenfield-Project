@@ -5,7 +5,7 @@ controller:function(){
 		 $.ajax({
 	 	  async:false,
 	 	  type:'post',
-    	  url: "https://desolate-caverns-89800.herokuapp.com/delete",
+    	  url: "/delete",
     	  dataType: 'json',
     	  data:title
     })
