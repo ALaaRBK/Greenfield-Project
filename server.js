@@ -150,23 +150,26 @@ app.post('/signUp', function(req, res) {
 //handling post request for movie data
 app.post('/add',function(req,res){
  
-  if(req.session.username){ 
+  
   //prepare record 
   Movie.findOne({title:req.body.title},function(err,added){
-    if(!added){
+    
 
   var record = new Movie ({
     id:req.body.id,
     title:req.body.title,
     poster_path:req.body.poster_path
   });
-
+})
 
   app.post('/delete', function(req,res){
   var title2=Object.keys(req.body)[0];
   var username2= req.session.username;
   // console.log('hanan',username)
+
+  if(req.session.username){ 
   Movie.findOne({title:title2},function(err,movie){
+    if(!movie){
     if(err){
       throw err;
     }else{
@@ -190,7 +193,7 @@ app.post('/add',function(req,res){
       })//
 
    }
-  })
+  
 })//
 
 //add it to database
