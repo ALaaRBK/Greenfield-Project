@@ -5,7 +5,7 @@ angular.module('myapp',[])
 		this.user=''
 		 $.ajax({
               		async:false,
-              		url: "http://desolate-caverns-89800.herokuapp.com/session",
+              		url: "https://desolate-caverns-89800.herokuapp.com/session",
               		cache: false,
               		dataType: 'json',
               		success: function(user){
@@ -57,7 +57,7 @@ angular.module('myapp',[])
 
 						$.ajax({
 				type:'get',
-				url:"http://desolate-caverns-89800.herokuapp.com/comment",
+				url:"https://desolate-caverns-89800.herokuapp.com/comment",
 				dataType:'json',
 				async:false,
 				success:function (comments) {
