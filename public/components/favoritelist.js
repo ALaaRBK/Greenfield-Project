@@ -12,7 +12,7 @@ angular.module('favorite',[])
               	console.log(data)
               	x.data=data
             }
-            })
+            })//
 	},
 	templateUrl:'public/templates/favoritelist.html'
 });
