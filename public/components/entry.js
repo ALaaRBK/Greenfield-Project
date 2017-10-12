@@ -14,7 +14,7 @@ angular.module('myapp')
 		
 			$.ajax({
 				type:'POST',
-				url:"/comment",
+				url:"http://desolate-caverns-89800.herokuapp.com/comment",
 				dataType:'json',
 				async:false,
 				data:{comment:comment,title:that.movie.title, username:session},
@@ -31,7 +31,7 @@ angular.module('myapp')
 			//checking for username
 		    $.ajax({
               		async:false,
-              		url: "/session",
+              		url: "http://desolate-caverns-89800.herokuapp.com/session",
               		cache: false,
               		dataType: 'json',
               		success: function(user){

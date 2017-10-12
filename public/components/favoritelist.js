@@ -5,7 +5,7 @@ angular.module('favorite',[])
 		var x=this;
 		 $.ajax({
   		 	  async:false,
-              url: "/favorit",
+              url: "http://desolate-caverns-89800.herokuapp.com/favorit",
               cache: false,
               dataType: 'json',
               success: function(data){
