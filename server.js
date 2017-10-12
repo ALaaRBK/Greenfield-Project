@@ -148,6 +148,87 @@ app.post('/signUp', function(req, res) {
 
 
 //handling post request for movie data
+// app.post('/add',function(req,res){
+ 
+//   if(req.session.username){ 
+//   //prepare record 
+//   Movie.findOne({title:req.body.title},function(err,added){
+//     if(!added){
+
+//   var record = new Movie ({
+//     id:req.body.id,
+//     title:req.body.title,
+//     poster_path:req.body.poster_path
+//   });
+
+
+//   app.post('/delete', function(req,res){
+//   var title2=Object.keys(req.body)[0];
+//   var username2= req.session.username;
+//   // console.log('hanan',username)
+//   Movie.findOne({title:title2},function(err,movie){
+//     if(err){
+//       throw err;
+//     }else{
+//       console.log('hanan',movie)
+//       Movie.remove({_id:movie._id},function(err,result){
+//         if(err){
+//           console.log(err)
+//         }else{
+//           console.log('hjdsg')
+//           User.findOne({username:username2},function(err,user){
+//             if(err){
+//               throw err
+//             } else{
+//               console.log('hanan',user.movies.indexOf(movie._id))
+//               var indexOfmovie = user.movies.indexOf(movie._id)
+//               user.movies.splice(indexOfmovie,1)
+//               res.send("go away")
+//             }
+//           })
+//         }
+//       })//
+
+//    }
+//   })
+// })//
+
+// //add it to database
+// record.save( function(error, newMovie){
+//   var username = req.session.username;
+//   if(error){
+//     throw error;
+//   }
+
+//   User.findOne({username: username} , function(err, user){
+//     if (err)
+//      console.log('error in find =========>', err)
+
+//       user.movies.push(newMovie._id);
+//      console.log('user in find =========>', user.movies)
+//      User.findOneAndUpdate({username: username} ,{movies: user.movies},function(err , updated){
+//       if(err)
+//         console.log(err);
+//       else{
+//         console.log('updated---------------> ',updated)
+//       }
+//     })
+//    });
+// }); 
+// console.log('added')
+//   res.send('done');
+// }
+// else // if the user not logged in
+// {
+//   console.log ('>>>>>>>>>> rejected');
+//   res.redirect('/login')
+// }
+//  })
+// }
+
+// });
+
+
 app.post('/add',function(req,res){
  
   if(req.session.username){ 
@@ -191,6 +272,7 @@ else // if the user not logged in
 });
 
 
+
 app.post('/delete',function(req,res){
  var id = req.body.title ;
  console.log(id)
@@ -205,7 +287,6 @@ if(err){
    
 })
 })
-
 
 
 app.get('/favoritelist',function(req,res){
