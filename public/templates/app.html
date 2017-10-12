@@ -1,5 +1,5 @@
 <center><div>
-	<h2><span class="label label-default" style="font-family: courier; font-weight: normal"><font color="white">Welcome {{$ctrl.user}}</font></span><h2>
+	<h2><span class="label label-default" style="background-color: rgba(92, 0, 0, 0.91);box-shadow: 0 0 50px pink;font-family: Fredoka One; font-weight: normal"><font color="white">Welcome {{$ctrl.user}}</font></span><h2>
 </div></center>
 <div>
 <search change='$ctrl.change'/>
@@ -7,49 +7,11 @@
 <div>
 <list movie='$ctrl.movie' trailer='$ctrl.trailer' user="$ctrl.user" />
 </div>
-
-
-
 <div>
-
-
-<div class="container col-sm-3" ng-repeat="fakev in $ctrl.listMovie">
-  <img height="390" width="230" ng-src={{"http://image.tmdb.org/t/p/w185/"+fakev.poster_path}}  class="img image" >
-  <div class="middle">
-    <div class="text">John Doe</div>
-  </div>
-</div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-<!-- <div>
-
-	<div  id="item" ng-repeat="fakev in $ctrl.listMovie" class="col-sm-3 container">
-		<img height="390" width="230"  class="image" ng-src={{"http://image.tmdb.org/t/p/w185/"+fakev.poster_path}}>
-
-		  <div class="middle">
-    <div class="text">John Doe</div>
-  </div>
+	<div  id="item" ng-repeat="fakev in $ctrl.listMovie" class="col-sm-3">
+		<img  class="img" ng-src={{"http://image.tmdb.org/t/p/w185/"+fakev.poster_path}}>
+		<!-- {{fakev.original_title}} -->
 	</div>
 	<entry result="$ctrl.trailer_string"></entry>
 
-</div> -->
-
-
-<!-- 
-
-<div class="container">
-  <img src="img_avatar.png" alt="Avatar" class="img image" style="width:100%">
-  <div class="middle">
-    <div class="text">John Doe</div>
-  </div>
-</div> -->
+</div>

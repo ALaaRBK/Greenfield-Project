@@ -30,17 +30,7 @@ angular.module('myapp',[])
 				}
 			}
 
-			$.ajax({
-				type:'get',
-				url:"http://127.0.0.1:8080/comment",
-				dataType:'json',
-				async:false,
-				success:function (comments) {
-					x.comments=comments
-				}
 
-			})
-	    
 
 			console.log(text)
 			$.ajax({
@@ -63,12 +53,25 @@ angular.module('myapp',[])
               	})
               }
           })
+
+
+						$.ajax({
+				type:'get',
+				url:"http://127.0.0.1:8080/comment",
+				dataType:'json',
+				async:false,
+				success:function (comments) {
+					x.comments=comments
+					console.log("coments",x.comments)
+				}
+
+			})
 			
 			
 		}
 		this.listMovie = [];
 		var rand ;
-		while(x.listMovie.length < 4) {
+		while(x.listMovie.length < 12) {
 			rand = Math.floor(Math.random() * (100000 - 1)) + 1
 			$.ajax({
 					async:false,
@@ -89,6 +92,7 @@ angular.module('myapp',[])
 	              	// 		x.trailer[0]=data2
 	              	// 		console.log("trallier",x.trailer)
 	              	// 	}
+	              	//  && x.movies.genres.indexOf(name["Action"])!==-1
 	              	// })
 	              }
 	          })

@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var movieList = require("./Model/movieList.js")
 var coverter = require("../convert.js").convertor;
-mongoURI = 'mongodb://localhost/movies'; 
+mongoURI = 'mongodb://firewall:1234@ds117935.mlab.com:17935/firewall'; 
 mongoose.connect(mongoURI);
 
 // Run in seperate terminal window using 'mongod'

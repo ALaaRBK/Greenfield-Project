@@ -2,7 +2,7 @@ angular.module('myapp')
 .component('entry',{
 	controller:function(){
 
-
+		
 
 		var that=this;
 		var session=undefined;
@@ -23,6 +23,7 @@ angular.module('myapp')
 				}
 
 			})
+
 		}
 		this.favorite=function(id,title,poster_path){
 			//prepare object to send it to node server
