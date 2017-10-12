@@ -7,7 +7,9 @@ controller:function(){
 	 	  type:'post',
     	  url: "https://desolate-caverns-89800.herokuapp.com/delete",
     	  dataType: 'json',
-    	  data:title
+    	  data:{
+          title:title
+        }
     })
      location.reload();
 	}
