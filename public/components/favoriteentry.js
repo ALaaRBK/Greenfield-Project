@@ -5,7 +5,7 @@ controller:function(){
 		 $.ajax({
 	 	  async:false,
 	 	  type:'post',
-    	  url: "http://127.0.0.1:8080/delete",
+    	  url: "/delete",
     	  dataType: 'json',
     	  data:title
     })

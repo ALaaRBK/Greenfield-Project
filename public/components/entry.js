@@ -14,7 +14,7 @@ angular.module('myapp')
 		
 			$.ajax({
 				type:'POST',
-				url:"http://127.0.0.1:8080/comment",
+				url:"/comment",
 				dataType:'json',
 				async:false,
 				data:{comment:comment,title:that.movie.title, username:session},
@@ -31,7 +31,7 @@ angular.module('myapp')
 			//checking for username
 		    $.ajax({
               		async:false,
-              		url: "http://127.0.0.1:8080/session",
+              		url: "/session",
               		cache: false,
               		dataType: 'json',
               		success: function(user){
@@ -44,7 +44,7 @@ angular.module('myapp')
 			}else{
 			  //make ajax request to server to add it to database 
 			  $.ajax({
-              url: "http://127.0.0.1:8080/add",
+              url: "/add",
               type: "POST",
               data: obj,
               dataType: "html"

@@ -5,7 +5,7 @@ angular.module('myapp',[])
 		this.user=''
 		 $.ajax({
               		async:false,
-              		url: "http://127.0.0.1:8080/session",
+              		url: "/session",
               		cache: false,
               		dataType: 'json',
               		success: function(user){
@@ -57,7 +57,7 @@ angular.module('myapp',[])
 
 						$.ajax({
 				type:'get',
-				url:"http://127.0.0.1:8080/comment",
+				url:"/comment",
 				dataType:'json',
 				async:false,
 				success:function (comments) {
